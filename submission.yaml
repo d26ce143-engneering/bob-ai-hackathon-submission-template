@@ -9,51 +9,61 @@
 # =============================================================================
 
 team:
-  name: ""                             # REQUIRED — e.g., "Orion Squad"
-  track: ""                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  name: "Mission Readiness Team"
+  track: "AI"
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: "solanki dharma"
+    email: "d26ce143@charusat.edu.in"
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
-    - name: ""                         # Add more members by copying the two lines above
-      email: ""
-    - name: ""
-      email: ""
+    - name: "Patel Jeel"
+      email: "d26dce134@charusat.edu.in"
+    - name: "Tala Vinit"
+      email: "26mca174@charusat.edu.in"
+    - name: "Majithiya Adtiya"
+      email: "26mca081@charusat.edu.in"
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title: "Mission Readiness & Predictive Maintenance Copilot"
 
-  problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-    Replace this text with a concise description of the real-world problem
-    your project addresses and who experiences it.
+  problem_statement: >
+    Military maintenance teams often rely on fixed maintenance schedules
+    instead of actual equipment condition, making it difficult to identify
+    failures before they affect mission readiness. Sensor and maintenance data
+    can contain early warning signals, but these signals are often difficult
+    to analyze and act on quickly.
 
-  solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-    Replace this text with a clear description of your solution
-    and how it addresses the problem above.
+  solution_summary: >
+    We built an AI-powered dashboard that analyzes equipment sensor data to
+    predict Remaining Useful Life (RUL) and classify assets as Ready, Watch,
+    or Critical. The system identifies at-risk assets, provides maintenance
+    recommendations, and allows officers to schedule and store maintenance
+    decisions.
 
-  key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+  key_features:
+    - "AI-based Remaining Useful Life (RUL) prediction for equipment"
+    - "Mission readiness classification into Ready, Watch, and Critical"
+    - "Component failure risk identification and explanation"
+    - "Prioritized maintenance planning and scheduling"
+    - "Maintenance decision storage using SQLite database"
 
   tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
+    languages: ["Python", "JavaScript", "JSX"]
+    frameworks: ["React", "Vite", "Flask", "Express.js"]
+    ibm_technologies: ["IBM Bob"]
+    databases: ["SQLite"]
+    other: ["Scikit-learn", "Pandas", "NumPy", "Joblib", "Tailwind CSS", "Recharts"]
 
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    Replace with what aspect of the submission you consider strongest
-    and want judges to pay special attention to.
+  what_we_are_most_proud_of: >
+    We are most proud of turning raw sensor data into actionable maintenance
+    decisions through a single dashboard. The system combines RUL prediction,
+    readiness classification, risk identification, and maintenance scheduling
+    to support proactive, data-driven maintenance decisions.
 
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-    Replace with any known limitations, incomplete features,
-    or shortcuts taken due to time constraints.
+  known_limitations: >
+    Component failure prediction is currently associated with asset risk rather
+    than being a separately trained component-level ML model. The asset and
+    maintenance data are prototype/demo data, and the ML models would require
+    additional real-world data and validation for production deployment.
 
 # =============================================================================
 # ARTIFACT LOCATIONS
@@ -63,7 +73,7 @@ artifacts:
   source_code: "src/"
   setup_guide: "docs/setup-guide.md"
   architecture_doc: "docs/architecture.md"
-  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
-  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
-  screenshots: "demo/screenshots/"
+  demo_video: "https://youtu.be/-gx2aMFBHbA?si=hZa8hVEGVtIiXxh2"
+  live_demo: "https://youtu.be/-gx2aMFBHbA?si=hZa8hVEGVtIiXxh2t"
+  screenshots: ""
   presentation: "presentation/"
