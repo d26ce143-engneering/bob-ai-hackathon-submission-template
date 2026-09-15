@@ -9,61 +9,92 @@
 # =============================================================================
 
 team:
-  name: ""                             # REQUIRED — e.g., "Orion Squad"
-  track: ""                            # REQUIRED — one of: AI | DevOps | Sustainability | Open
+  name: Teach Titans                           # REQUIRED — e.g., "Orion Squad"
+  track: AI,Python,React.js,SQLLite                           # REQUIRED — one of: AI | DevOps | Sustainability | Open
   lead:
-    name: ""                           # REQUIRED — e.g., "Alice Chen"
-    email: ""                          # REQUIRED — e.g., "alice.chen@ibm.com"
+    name: solanki dharma                         # REQUIRED — e.g., "Alice Chen"
+    email:  d26ce143@charusat.edu.in                            # REQUIRED — e.g., "alice.chen@ibm.com"
   members:
-    - name: ""                         # REQUIRED — Team member 1
-      email: ""
-    - name: ""                         # Add more members by copying the two lines above
-      email: ""
-    - name: ""
-      email: ""
+    - name: patel jeel                       # REQUIRED — Team member 1
+      email: d26dce134@charusat.edu.in
+    - name: Tala vinit                       # Add more members by copying the two lines above
+      email:   26mca174@charusat.edu.in
+       - name: Majithiya Aditya
+      email: 26mca081@charusat.edu.in
 
 submission:
-  title: ""                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
+  title:Teach-Titans                            # REQUIRED — Project display name, e.g., "SmartOps Dashboard"
 
   problem_statement: >                 # REQUIRED — 1-3 sentences. What problem? Who has it?
-    Replace this text with a concise description of the real-world problem
-    your project addresses and who experiences it.
+   Mission Readiness & Predictive Maintenance Copilot is an AI-powered dashboard
+   that analyzes sensor and maintenance data to predict equipment health, 
+   Remaining Useful Life (RUL), and readiness status.
+   It helps maintenance officers identify at-risk assets, prioritize maintenance, 
+   and take proactive actions before failures occur.
 
   solution_summary: >                  # REQUIRED — 1-3 sentences. What did you build?
-    Replace this text with a clear description of your solution
-    and how it addresses the problem above.
+AI-based Remaining Useful Life (RUL) prediction for equipment
+ Ready, Watch, and Critical mission-readiness classification
+ Component failure risk identification and explanation
+ Prioritized maintenance planning and scheduling
+ Maintenance records stored and managed using SQLite database
 
-  key_features:                        # REQUIRED — List 3 to 5 specific features you implemented
-    - ""                               # e.g., "Real-time pipeline anomaly detection using watsonx.ai"
-    - ""
-    - ""
-    - ""                               # optional 4th
-    - ""                               # optional 5th
+  key_features: 
+  - "AI-based Remaining Useful Life (RUL) prediction for equipment"
+  - "Mission readiness classification into Ready, Watch, and Critical"
+  - "Component failure risk identification and explanation"
+  - "Prioritized maintenance planning and scheduling"
+  - "Maintenance decision storage using SQLite database"
 
   tech_stack:
-    languages: []                      # REQUIRED — e.g., ["Python", "TypeScript"]
-    frameworks: []                     # e.g., ["FastAPI", "React"]
-    ibm_technologies: []               # e.g., ["watsonx.ai", "IBM Bob", "IBM Cloud Functions"]
-    databases: []                      # e.g., ["PostgreSQL", "Redis"]
-    other: []                          # e.g., ["Docker", "GitHub Actions", "Slack API"]
+    languages: Python, JavaScript (JSX)                      
+    frameworks: React, Vite, Flask, Express.js                 
+    ibm_technologies: IBM Bob              
+    databases: SQLLite                   
+    other: Scikit-learn, Pandas, NumPy, Joblib, Tailwind CSS, Recharts                        
 
-  what_we_are_most_proud_of: >         # Optional but recommended — guides judges to your best work
-    Replace with what aspect of the submission you consider strongest
-    and want judges to pay special attention to.
+  what_we_are_most_proud_of: >         
+   We are most proud of turning raw sensor data into actionable maintenance decisions.
+   Our system combines RUL prediction, readiness classification, risk identification, and maintenance scheduling in one dashboard, helping maintenance 
+   officers move from reactive maintenance to proactive, data-driven decisions.
 
-  known_limitations: >                 # Optional but recommended — be honest about gaps
-    Replace with any known limitations, incomplete features,
-    or shortcuts taken due to time constraints.
+  known_limitations: >                
+  Component failure prediction is currently rule-based/associated with asset risk, rather than a separately trained component-level ML model.
+ Asset and maintenance data are prototype/demo data and are not connected to real military equipment systems.
+ The ML models are proof-of-concept models trained on the provided sensor dataset and would require more real-world data and validation for production deployment.
 
 # =============================================================================
 # ARTIFACT LOCATIONS
 # These paths are relative to the repo root. Only change if you moved files.
 # =============================================================================
 artifacts:
-  source_code: "src/"
+  source_code: 
+  mission-readiness-copilot/
+    ├── ml/
+    │   ├── api.py
+    │   ├── best_rul_model.pkl
+    │   ├── status_classifier.pkl
+    │   ├── status_classifier.py
+    │   └── test_model.py
+    │
+    ├── public/
+    │   └── train.csv
+    │
+    ├── server/
+    │   ├── maintenance.db
+    │   └── server.js
+    │
+    ├── src/
+    │   ├── App.jsx
+    │   ├── index.css
+    │   └── main.jsx
+    │
+    ├── index.html
+    ├── package.json
+    ├── package-lock.json
+    ├── README.md
+    └── vite.config.js
   setup_guide: "docs/setup-guide.md"
   architecture_doc: "docs/architecture.md"
-  demo_video: "demo/demo-video-link.txt"   # URL to hosted video (YouTube, Loom, Box)
-  live_demo: "demo/live-demo-url.txt"      # URL to deployed demo (optional)
-  screenshots: "demo/screenshots/"
-  presentation: "presentation/"
+  demo_video: " https://youtu.be/-gx2aMFBHbA?si=hZa8hVEGVtIiXxh2"  # URL to hosted video (YouTube, Loom, Box)
+  presentation: IBM BOB PRESENTATION
